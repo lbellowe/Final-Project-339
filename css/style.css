@@ -1,0 +1,222 @@
+nav li {
+    display: block;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-right: 20px;
+    color:blue;
+}
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: lightblue;
+    color: blue;
+    line-height: normal;
+}
+.active {
+    font-size: 30px;
+    font-weight: bold;
+}
+header {
+    background-color: yellow;
+    padding-bottom: 10px;
+}
+footer, .footer{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+    padding: 20px;
+    background-color: yellow;
+}
+h1 {
+    color: blue;
+}
+a:link, a:visited {
+    color: blue;
+    text-decoration: none;
+}
+.home {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr;
+}
+.home img:nth-child(3) {
+    visibility: hidden;
+}
+.home p {
+    width: 90%;
+    border: solid 5px yellow;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: large;
+    margin-top: 10px;
+    padding: 3px;
+}
+/* header img {
+    width: 50px;
+} */
+.info {
+    display: none;
+}
+.home img {
+    width: 90%;
+    border: solid 5px yellow;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.home img:last-child {
+    grid-column: 1 / 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 90%;
+}
+.container img{
+    width: 95%;
+    height: 220px;
+    border: solid 5px yellow;
+}
+/* grid for restaurants.html */
+.container {
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: 15px;
+    /* align-items: stretch;
+    justify-items: center; */
+    box-sizing:border-box;
+}
+.container img:nth-child(even) {
+        border: solid 10px blue;
+        border-radius: 10px;
+}
+.container img:nth-child(odd) {
+    border: solid 10px yellow;
+    border-radius: 10px;
+}
+
+.myButton {
+    display: none;
+}
+.gallery img {
+    border: 10px solid blue;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 90%;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-basis: 500px;
+}
+@media screen and (min-width : 600px) { 
+    .home img:nth-child(3) {
+        visibility: visible;
+    }
+    .home {
+        /* display: grid;
+        column-gap: 10px;
+        grid-template-columns: 1fr 1fr; */
+        align-items: center;
+        /* justify-items: center;
+        grid-template-rows: 1fr 1fr; */
+    }
+    
+    nav li {
+        display: inline;
+        text-decoration: underline;
+    }
+    nav li:hover, nav li:focus {
+        border-color: blue;
+        border-right: 10px;
+    }
+}
+@media screen and (min-width : 700px){
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        align-items: stretch;
+        justify-items: stretch;
+        box-sizing:border-box;
+        width: 95%;
+        margin-left: 2%;
+    }
+    .myButton {
+        background-color:#1e00ff;
+        border-radius:20px;
+        border: 3px solid #ffff00;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffff00;
+        font-family:Georgia, 'Times New Roman', Times, serif;;
+        font-size:17px;
+        padding:17px 17px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #2f6627;
+        margin: 10px;
+    }
+    .myButton:hover {
+        background-color:#0022ff;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    .info {
+        display: inline;
+        font-size: large;
+        margin: 10px;
+    }
+    nav {
+        text-align: right;
+    }
+    h1{
+        font-size: 40px;
+    }
+}
+@media screen and (min-width : 900px) {
+    .container { 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        box-sizing:border-box;
+        margin: 20px;
+    }
+    .info {
+        font-size: larger;
+        border-style: solid;
+        border-color: blue;
+        border-width: 5px;
+        /* margin: 20px;
+        padding: 20px; */
+        background-color: yellow;
+        padding: 2px;
+    }
+    .study {
+        margin: 20px;
+    }
+}
+.skip a{
+    background: lightblue;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+.skip a{
+    position: absolute; 
+    top: -40px;
+    /* 40px above the top of its parent element */
+}
+  
+.skip a:focus {
+    top: 8px;
+    /* 20px below the top of its parent */
+}
+/* .footer {
+    position:fixed;
+} */
