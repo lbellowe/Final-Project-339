@@ -4,39 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/html5reset.css">
+    <link href="../dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/html5reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Study Spaces</title>
 </head>
 <body>
-    <a href="#main">Skip to Main Content</a>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
         <nav>
             <ul>
-                <li class="active"><a href = "home.html">Home</a></li>
+                <li><a href = "home.html">Home</a></li>
                 <li><a href = "restaurants.html">Restaurants</a></li>
-                <li><a href = "study_spaces.html">Study Spaces</a></li>
+                <li class="active"><a href = "study_spaces.html">Study Spaces</a></li>
             </ul>
         </nav>
         <h1>Study Spaces</h1>
     </header>
-    <main id = "main">
-        <div class="controls">
-            <button type="button" class="control" data-filter=".quiet">Quiet Spots</button>
-            <button type="button" class="control" data-filter=".social">Social Study Areas</button>
-            <button type="button" class="control" data-filter=".coffee">Coffee Shops</button>
+    <div>
+        <button type="button" class="myButton" data-filter=".all">All</button>
+        <button type="button" class="myButton" data-filter=".quiet">Quiet Spots</button>
+        <button type="button" class="myButton" data-filter=".social">Social Study Areas</button>
+        <button type="button" class="myButton" data-filter=".coffee">Coffee Shops</button>
+    </div>
+    <p class = "info"> Click on the buttons above to sort by the type of study space, or click on images to see location details!</p>
+    <main class = "study" id = "main">
+        <div class="gallery"> 
+            <figure class = "mix quiet all">
+                <a href = "../images/law_library.jpg" target="_blank" data-lightbox = "study" data-title = "Law Library">
+                    <img src = "../images/law_library.jpg" width="100" alt = "University of Michigan Law Library" />
+                </a>
+            </figure>
+            <figure class = "mix social all">
+                <a href = "../images/union.jpg" target="_blank" data-lightbox = "study" data-title = "Michigan Union">
+                    <img src = "../images/union.jpg" width="100" alt = "University of Michigan Union" />
+                </a>
+            </figure>
+            <figure class = "mix quiet all">
+                <a href = "../images/hatcher.jpg" target="_blank" data-lightbox = "study" data-title = "Hatcher Graduate Library">
+                    <img src = "../images/hatcher.jpg" width="100" alt = "University of Michigan Hatcher Library Reference Room" />
+                </a>
+            </figure>
+            <figure class = "mix social coffee all">
+                <a href = "../images/starbucks.jpg" target="_blank" data-lightbox = "study" data-title = "Starbucks">
+                    <img src = "../images/starbucks.jpg" width="100" alt = "People Studying at Starbucks" />
+                </a>
+            </figure>
+            <figure class = "mix social quiet all">
+                <a href = "../images/social_work.jpg" target="_blank" data-lightbox = "study" data-title = "School of Social Work">
+                    <img src = "../images/social_work.jpg" width="100" alt = "University of Michigan School of Social Work Basement" />
+                </a>
+            </figure>
+            <figure class = "mix social coffee all">
+                <a href = "../images/vertex.jpg" target="_blank" data-lightbox = "study" data-title = "Vertex Coffee Shop">
+                    <img src = "../images/vertex.jpg" width="100" alt = "Vertex Coffee Shop Outdoor Area" />
+                </a>
+            </figure>
+            <figure class = "mix quiet all">
+                <a href = "../images/ross.jpg.webp" target="_blank" data-lightbox = "study" data-title = "Ross School of Business">
+                    <img src = "../images/ross.jpg.webp" width="100" alt = "Ross School of Business" />
+                </a>
+            </figure>
+            <figure class = "mix coffee social all">
+                <a href = "../images/drip_house.jpg" target="_blank" data-lightbox = "study" data-title = "Drip House Coffee Shop">
+                    <img src = "../images/drip_house.jpg" width="100" alt = "Drip House Coffee Shop" />
+                </a>
+            </figure>
+            <figure class = "mix quiet all">
+                <a href = "../images/ugli.jpg" target="_blank" data-lightbox = "study" data-title = "Undergraduate Library (Ugli)">
+                    <img src = "../images/ugli.jpg" width="100" alt = "Students studying at University of Michigan Undergraduate Library" />
+                </a>
+            </figure> 
         </div>
-        <img src = "../images/law_library.jpg" width="100" alt = "University of Michigan Law Library" />
-        <img src = "../images/union.jpg" width="100" alt = "University of Michigan Union" />
-        <img src = "../images/hatcher.jpg" width="100" alt = "University of Michigan Hatcher Library Reference Room" />
-        <img src = "../images/starbucks.jpg" width="100" alt = "People Studying at Starbucks" />
-        <img src = "../images/social_work.jpg" width="100" alt = "University of Michigan School of Social Work Basement" />
-        <img src = "../images/vertex.webp" width="100" alt = "Vertex Coffee Shop Outdoor Area" />
-        <img src = "../images/ross.jpg.webp" width="100" alt = "Ross School of Business" />
-        <img src = "../images/drip_house.jpg" width="100" alt = "Drip House Coffee Shop" />
-        <img src = "../images/ugli.jpg" width="100" alt = "University of Michigan Undergraduate Library" />
     </main>
+    
     <footer>
-        <p> &copy; Lindsey Bellowe - Web Design 2022-2023</p>
+        <p> &copy; Lindsey Bellowe - SI 339: Web Design 2022-2023</p>
     </footer>
+    <script src="../dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+        lightbox.option({
+          'resizeDuration': 10,
+          'wrapAround': true,
+          positionFromTo: 10
+        })
+    </script>
+    <script src="../js/mixitup.min.js"></script>
+
+    <script>
+        var containerEl = document.querySelector('.gallery');
+        var mixer = mixitup(containerEl);
+    </script>
 </body>
 </html>
