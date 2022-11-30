@@ -4,44 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/html5reset.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href="../dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/html5reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Restaurants</title>
 </head>
 <body>
-    <a href="#main">Skip to Main Content</a>
-    <!-- axe ereror w main -->
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
         <nav>
             <ul>
-                <li class="active"><a href = "home.html">Home</a></li>
-                <li><a href = "restaurants.html">Restaurants</a></li>
+                <li><a href = "home.html">Home</a></li>
+                <li class= "active"><a href = "restaurants.html">Restaurants</a></li>
                 <li><a href = "study_spaces.html">Study Spaces</a></li>
             </ul>
         </nav>
         <h1>Ann Arbor Restaurants</h1>
     </header>
-    <main id = "main">
-        <div class="controls">
-            <button type="button" class="control" data-filter=".casual">Casual or Pickup</button>
-            <button type="button" class="control" data-filter=".nicer">Nicer or Sitdown</button>
-            <button type="button" class="control" data-filter=".late">Late Night </button>
-        </div>
-        <img src = "../images/beyond.png" width="100" alt = "Turkey Avocado Wrap" />
-        <img src = "../images/pizza_house.jpg" width="100" alt = "Feta Bread" />
-        <img src = "../images/bigalora.jpg" width="100" alt = "Margherita Pizza" />
-        <img src = "../images/savas.jpg" width="100" alt = "Garden Salad" />
-        <img src = "../images/no_thai.jpg" width="100" alt = "Pad Thai" />
-        <img src = "../images/sadako.jpg" width="100" alt = "Assorted Sushi" />
-        <img src = "../images/amers.jpg" width="100" alt = "Acai" />
-        <img src = "../images/zingermans.png" width="100" alt = "Rueben Sandwich" />
-        <img src = "../images/palio.jpg" width="100" alt = "Pesto Pasta" />
-        <img src = "../images/joes.jpg" width="100" alt = "Pizzas" />
-        <img src = "../images/frita.jpg" width="100" alt = "Burger with French Fries and Egg" />
-        <img src = "../images/mani.jpg" width="100" alt = "Spaghetti and Meatballs" />
+    <div>
+        <button type="button" class="myButton" data-filter=".all">All</button>
+        <button type="button" class="myButton" data-filter=".casual">Casual or Pickup</button>
+        <button type="button" class="myButton" data-filter=".nicer">Nicer or Sitdown</button>
+        <button type="button" class="myButton" data-filter=".late">Late Night </button>
+    </div>
+    <p class = "info"> Click on the buttons above to sort by the type of restaurant, or click on an image to see my recommendation!</p>
+    <main class = "container" id = "main">
+        <figure class = "mix casual all">
+            <a href="../images/beyond.png" target="_blank" data-lightbox="food" data-title = "Beyond Juicery - Must Try: Turkey Avocado Wrap">
+                <img src="../images/beyond.png" width = "200" alt="Turkey Avocado Wrap">
+            </a>
+        </figure>
+        <figure class = "mix late all">
+            <a href="../images/pizza_house.jpg" target="_blank" data-lightbox="food" data-title = "Pizza House - Must Try: Feta Bread">
+                <img src = "../images/pizza_house.jpg" width="100" alt = "Feta Bread" />
+            </a>
+        </figure>
+        <figure class = "mix nicer all">
+            <a href="../images/bigalora.jpg" target="_blank" data-lightbox="food" data-title = "Bigalora - Must Try: Margherita Pizza">
+                <img src = "../images/bigalora.jpg" width="100" alt = "Margherita Pizza" />
+            </a>
+        </figure>
+        <figure class = "mix nicer all">
+            <a href="../images/savas.jpg" target="_blank" data-lightbox="food" data-title = "Savas - Must Try: Dirty Bird Burger">
+                <img src = "../images/savas.jpg" width="100" alt = "Garden Salad" />
+            </a>
+        </figure>
+        <figure class = "mix casual all">
+            <a href="../images/no_thai.jpg" target="_blank" data-lightbox="food" data-title = "No Thai - Must Try: Chicken Pad Thai">
+                <img src = "../images/no_thai.jpg" width="100" alt = "Pad Thai" />
+            </a>
+        </figure>
+        <figure class = "mix nicer all">
+            <a href="../images/sadako.jpg" target="_blank" data-lightbox="food" data-title = "Sadako - Must Try: Salmon Avocado Roll">
+                <img src = "../images/sadako.jpg" width="100" alt = "Assorted Sushi" />
+            </a>
+        </figure>
+        <figure class = "mix casual all">
+            <a href="../images/amers.jpg" target="_blank" data-lightbox="food" data-title = "Amer's Deli - Must Try: Acai Bowl">
+                <img src = "../images/amers.jpg" width="100" alt = "Acai Bowl" />
+            </a>
+        </figure>
+        <figure class = "mix casual all">
+            <a href="../images/zingermans.png" target="_blank" data-lightbox="food" data-title = "Zingerman's Deli - Must Try: Reuben Sandwich">
+                <img src = "../images/zingermans.png" width="100" alt = "Rueben Sandwich" />
+            </a>
+        </figure>
+        <figure class = "mix nicer all">
+            <a href="../images/palio.jpg" target="_blank" data-lightbox="food" data-title = "Palio - Must Try: Pesto Pasta">
+                <img src = "../images/palio.jpg" width="100" alt = "Pesto Pasta" />
+            </a>
+        </figure>
+        <figure class = "mix late all">
+            <a href="../images/joes.jpg" target="_blank" data-lightbox="food" data-title = "Joe's Pizza - Must Try: Slice of Fresh Mozz">
+                <img src = "../images/joes.jpg" width="100" alt = "Pizzas" />
+            </a>
+        </figure>
+        <figure class = "mix casual all">
+            <a href="../images/frita.jpg" target="_blank" data-lightbox="food" data-title = "Frita Batidos - Must Try: Beef Frita with Avocado Spread">
+                <img src = "../images/frita.jpg" width="100" alt = "Burger with French Fries and Egg" />
+            </a>
+        </figure>
+        <figure class = "mix nicer all">
+            <a href="../images/mani.jpg" target="_blank" data-lightbox="food" data-title = "Mani Osteria - Must Try: Spaghetti and Meatballs">
+                <img src = "../images/mani.jpg" width="100" alt = "Spaghetti and Meatballs" />
+            </a>
+        </figure>
     </main>
+    
     <footer>
-        <p> &copy; Lindsey Bellowe - Web Design 2022-2023</p>
+        <p> &copy; Lindsey Bellowe - SI 339: Web Design 2022-2023</p>
     </footer>
+    <script src="../dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+        lightbox.option({
+          'resizeDuration': 10,
+          'wrapAround': true,
+          positionFromTo: 10
+        })
+    </script>
+    <script src="../js/mixitup.min.js"></script>
+    <script>
+        var containerEl = document.querySelector('.container');
+        var mixer = mixitup(containerEl);
+    </script>
 </body>
 </html>
