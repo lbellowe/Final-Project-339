@@ -131,6 +131,9 @@ main p:last-child {
     background-color: #ffff00;
     text-align: center;
 }
+iframe {
+    display: none;
+}
 @media screen and (min-width : 600px) { 
     .home img:nth-child(3) {
         visibility: visible;
@@ -191,12 +194,11 @@ main p:last-child {
     h1{
         font-size: 40px;
     }
-    /* a {
-        font-size: larger;
-        padding-top: 10px;
-        margin-top: 30px;
-        text-decoration: solid;
-    } */
+    iframe {
+        display: block;
+        width: 98%;
+        margin: 10px;
+    }
 }
 @media screen and (min-width : 900px) {
     .container { 
