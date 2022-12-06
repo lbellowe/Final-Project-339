@@ -11,10 +11,7 @@ body {
     color: blue;
     line-height: normal;
 }
-.active {
-    font-size: 30px;
-    font-weight: bold;
-}
+
 header {
     background-color: yellow;
     padding-bottom: 10px;
@@ -31,7 +28,17 @@ h1 {
 }
 a:link, a:visited {
     color: blue;
-    text-decoration: none;
+    /* text-decoration: none; */
+}
+.active{
+    font-size: 30px;
+    font-weight: bold;
+    color: lightblue;
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
 .home {
     display: grid;
@@ -113,17 +120,23 @@ a:link, a:visited {
     align-items: stretch;
     flex-basis: 500px;
 }
+main p:last-child {
+    display:block;
+    font-size: larger;
+    margin-top: 20px;
+    margin-left: 15px;
+    border-style: solid;
+    /* border-color: yellow; */
+    border-width: 5px;
+    background-color: #ffff00;
+    text-align: center;
+}
 @media screen and (min-width : 600px) { 
     .home img:nth-child(3) {
         visibility: visible;
     }
     .home {
-        /* display: grid;
-        column-gap: 10px;
-        grid-template-columns: 1fr 1fr; */
         align-items: center;
-        /* justify-items: center;
-        grid-template-rows: 1fr 1fr; */
     }
     
     nav li {
@@ -131,8 +144,8 @@ a:link, a:visited {
         text-decoration: underline;
     }
     nav li:hover, nav li:focus {
-        border-color: blue;
-        border-right: 10px;
+        border-color: lightblue;
+        /* border-right: 10px; */
     }
 }
 @media screen and (min-width : 700px){
@@ -178,6 +191,12 @@ a:link, a:visited {
     h1{
         font-size: 40px;
     }
+    /* a {
+        font-size: larger;
+        padding-top: 10px;
+        margin-top: 30px;
+        text-decoration: solid;
+    } */
 }
 @media screen and (min-width : 900px) {
     .container { 
@@ -217,6 +236,3 @@ a:link, a:visited {
     top: 8px;
     /* 20px below the top of its parent */
 }
-/* .footer {
-    position:fixed;
-} */
